@@ -22,6 +22,12 @@ export default function ClientComponent({
     >
       <VoiceProvider
         auth={{ type: "accessToken", value: accessToken }}
+        configId="db55fe87-7103-4757-9212-443fb2d1de8c"
+        // sessionSettings={{
+        //   type: "session_settings",
+        //   customSessionId: "db55fe87-7103-4757-9212-443fb2d1de8c",
+        //   // systemPrompt: "You are a virtual chef assistant. You are able to help with recipes and cooking tips.",
+        // }}
         onMessage={() => {
           if (timeout.current) {
             window.clearTimeout(timeout.current);
